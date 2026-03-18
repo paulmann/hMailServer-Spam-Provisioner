@@ -143,21 +143,22 @@ graph TB
     EXIT_CODE -->|Yes| EXIT_FAIL[Exit Code: 1]
     EXIT_CODE -->|No| EXIT_SUCCESS[Exit Code: 0]
     
-    style START fill:#e3f2fd
-    style CONNECT fill:#fff3e0
-    style DEBUG_INIT fill:#ffe0b2
-    style NORMAL_INIT fill:#c8e6c9
-    style CREATE_FOLDER fill:#b2dfdb
-    style CREATE_RULE fill:#b2ebf2
-    style FOLDER_SUCCESS fill:#c8e6c9
-    style RULE_SUCCESS fill:#c8e6c9
-    style FOLDER_EXISTS fill:#e0e0e0
-    style RULE_EXISTS fill:#e0e0e0
-    style SKIP fill:#e0e0e0
-    style ERROR1 fill:#ffcdd2
-    style EXIT_FAIL fill:#ffcdd2
-    style EXIT_SUCCESS fill:#c8e6c9
-    style SUMMARY fill:#e1bee7
+    %% Color scheme with explicit text color for contrast
+    style START fill:#e3f2fd,color:#1a1a1a,stroke:#1976d2
+    style CONNECT fill:#fff3e0,color:#1a1a1a,stroke:#f57c00
+    style DEBUG_INIT fill:#ffe0b2,color:#1a1a1a,stroke:#ef6c00
+    style NORMAL_INIT fill:#c8e6c9,color:#1a1a1a,stroke:#388e3c
+    style CREATE_FOLDER fill:#b2dfdb,color:#1a1a1a,stroke:#00897b
+    style CREATE_RULE fill:#b2ebf2,color:#1a1a1a,stroke:#00acc1
+    style FOLDER_SUCCESS fill:#c8e6c9,color:#1a1a1a,stroke:#388e3c
+    style RULE_SUCCESS fill:#c8e6c9,color:#1a1a1a,stroke:#388e3c
+    style FOLDER_EXISTS fill:#e0e0e0,color:#1a1a1a,stroke:#616161
+    style RULE_EXISTS fill:#e0e0e0,color:#1a1a1a,stroke:#616161
+    style SKIP fill:#e0e0e0,color:#1a1a1a,stroke:#616161
+    style ERROR1 fill:#ffcdd2,color:#1a1a1a,stroke:#c62828
+    style EXIT_FAIL fill:#ffcdd2,color:#1a1a1a,stroke:#c62828
+    style EXIT_SUCCESS fill:#c8e6c9,color:#1a1a1a,stroke:#388e3c
+    style SUMMARY fill:#e1bee7,color:#1a1a1a,stroke:#7b1fa2
 ```
 ## 📥 Installation & Usage
 
