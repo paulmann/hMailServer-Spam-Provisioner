@@ -92,8 +92,8 @@ graph TB
     AUTH -->|Failed| ERROR1[Exit: Authentication Failed]
     AUTH -->|Success| MODE{Debug Mode?}
     
-    MODE -->|DEBUG=1| DEBUG_INIT[Initialize Debug Mode<br/>First Active Account Only]
-    MODE -->|DEBUG=0| NORMAL_INIT[Initialize Normal Mode<br/>All Active Accounts]
+    MODE -->|DEBUG=1| DEBUG_INIT["Initialize Debug Mode<br/>First Active Account Only"]
+    MODE -->|DEBUG=0| NORMAL_INIT["Initialize Normal Mode<br/>All Active Accounts"]
     
     DEBUG_INIT --> ITERATE_DOMAINS
     NORMAL_INIT --> ITERATE_DOMAINS
@@ -103,7 +103,7 @@ graph TB
     
     ITERATE_ACCOUNTS --> ACTIVE_CHECK{Account Active?}
     ACTIVE_CHECK -->|No| SKIP[Skip: Display Inactive Message]
-    ACTIVE_CHECK -->|Yes| DEBUG_CHECK{DEBUG Mode &<br/>Account Processed?}
+    ACTIVE_CHECK -->|Yes| DEBUG_CHECK["DEBUG Mode &<br/>Account Processed?"]
     
     DEBUG_CHECK -->|Yes| SUMMARY[Generate Summary]
     DEBUG_CHECK -->|No| ACCOUNT_HEADER[Display Account Header]
@@ -112,7 +112,7 @@ graph TB
     FOLDER_CHECK -->|Yes| FOLDER_EXISTS[Display: Folder Already Exists]
     FOLDER_CHECK -->|No| CREATE_FOLDER[Create IMAP Folder]
     
-    CREATE_FOLDER --> FOLDER_SAVE[Save Folder<br/>ParentID=0 Top Level]
+    CREATE_FOLDER --> FOLDER_SAVE["Save Folder<br/>ParentID=0 Top Level"]
     FOLDER_SAVE --> FOLDER_SUCCESS[Display: Folder Created]
     FOLDER_EXISTS --> RULE_CHECK
     FOLDER_SUCCESS --> RULE_CHECK
@@ -120,10 +120,10 @@ graph TB
     RULE_CHECK{Rule Exists?} -->|Yes| RULE_EXISTS[Display: Rule Already Exists]
     RULE_CHECK -->|No| CREATE_RULE[Create Rule Object]
     
-    CREATE_RULE --> RULE_CONFIG[Configure Rule:<br/>UseAND=false OR logic]
-    RULE_CONFIG --> ADD_CRIT1[Add Criterion 1:<br/>Header Match<br/>X-hMailServer-Spam: YES]
-    ADD_CRIT1 --> ADD_CRIT2[Add Criterion 2:<br/>Subject Contains<br/>[SPAM]]
-    ADD_CRIT2 --> ADD_ACTION1[Add Action 1:<br/>MoveToImapFolder<br/>[SPAM]]
+    CREATE_RULE --> RULE_CONFIG["Configure Rule:<br/>UseAND=false OR logic"]
+    RULE_CONFIG --> ADD_CRIT1["Add Criterion 1:<br/>Header Match<br/>X-hMailServer-Spam: YES"]
+    ADD_CRIT1 --> ADD_CRIT2["Add Criterion 2:<br/>Subject Contains<br/>[SPAM]"]
+    ADD_CRIT2 --> ADD_ACTION1["Add Action 1:<br/>MoveToImapFolder<br/>[SPAM]"]
     ADD_ACTION1 --> ADD_ACTION2[Add Action 2:<br/>StopRuleProcessing]
     ADD_ACTION2 --> RULE_SAVE[Save Rule]
     RULE_SAVE --> RULE_SUCCESS[Display: Rule Created]
