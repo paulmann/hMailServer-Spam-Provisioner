@@ -1,7 +1,6 @@
 # hMailServer-Spam-Provisioner
 
 [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/paulmann/hMailServer-Spam-Provisioner)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![PowerShell](https://img.shields.io/badge/powershell-7.5%2B-blue.svg)](https://github.com/PowerShell/PowerShell)
 [![Platform](https://img.shields.io/badge/platform-Windows%20Server-blue.svg)](https://www.microsoft.com/windows/)
 [![hMailServer](https://img.shields.io/badge/hMailServer-5.x-orange.svg)](https://www.hmailserver.com/)
